@@ -1,4 +1,3 @@
-import { Worker } from "@/types/worker";
 // Add your WorkerProfilePage component code here
 export default function WorkerProfilePage() {
     return (

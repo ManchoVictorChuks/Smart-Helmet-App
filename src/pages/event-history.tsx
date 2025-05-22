@@ -267,10 +267,9 @@ export default function EventHistoryPage() {
                       </PopoverTrigger>
                       <PopoverContent className="w-auto p-0">
                         <Calendar
-                          mode="single"
                           selected={startDate}
-                          onSelect={setStartDate}
-                          initialFocus
+                          onSelect={setStartDate as (date: Date) => void}
+                          initialFocus={true}
                         />
                       </PopoverContent>
                     </Popover>
@@ -285,10 +284,9 @@ export default function EventHistoryPage() {
                       </PopoverTrigger>
                       <PopoverContent className="w-auto p-0">
                         <Calendar
-                          mode="single"
                           selected={endDate}
-                          onSelect={setEndDate}
-                          initialFocus
+                          onSelect={setEndDate as (date: Date) => void}
+                          initialFocus={true}
                         />
                       </PopoverContent>
                     </Popover>
