@@ -1,7 +1,8 @@
-import { Calendar as CalendarPrimitive } from './calendar-primitive'
+import * as React from "react"
+import { DayPicker } from "react-day-picker"
 
-interface CalendarProps {
-    mode?: string;
+interface CalendarPrimitiveProps {
+    mode?: "single" | "range" | "multiple";
     selected?: Date;
     onSelect?: (date: Date) => void;
     initialFocus?: boolean;
@@ -9,17 +10,17 @@ interface CalendarProps {
 }
 
 export function Calendar({
-    mode,
+    mode = "single",
     selected,
     onSelect,
     initialFocus,
-    className
-}: CalendarProps) {
+    className,
+}: CalendarPrimitiveProps) {
     return (
-        <CalendarPrimitive
+        <DayPicker
             mode={mode}
             selected={selected}
-            onSelect={onSelect}
+            onSelect={onSelect as any}
             initialFocus={initialFocus}
             className={className}
         />
