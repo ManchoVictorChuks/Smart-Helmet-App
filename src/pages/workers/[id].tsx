@@ -9,7 +9,7 @@ import { Worker } from '@/types/worker';
 export default function WorkerDetailsPage() {
     const { id } = useParams();
     const navigate = useNavigate();
-    const [worker, setWorker] = useState<Worker | null>(null);
+    const [worker] = useState<Worker | null>(null);
 
     useEffect(() => {
         // Fetch worker data using id

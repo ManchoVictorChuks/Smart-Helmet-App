@@ -276,3 +276,7 @@ class HelmetService {
 }
 
 export const helmetService = new HelmetService();
+
+export const someFunction = async () => {
+  // ...implementation
+};

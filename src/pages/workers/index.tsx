@@ -7,7 +7,7 @@ import { ChevronLeft } from 'lucide-react';
 import { Worker } from '@/types/worker';
 
 export default function WorkersPage() {
-    const [workers, setWorkers] = useState<Worker[]>([]); // Replace with actual data fetching
+    const [workers] = useState<Worker[]>([]); // Replace with actual data fetching
     const [search, setSearch] = useState('');
 
     const filteredWorkers = workers.filter(worker => 
