@@ -3,7 +3,6 @@ import { format } from "date-fns";
 import {
   AlertTriangle,
   Check,
-  Clock,
   Filter,
   Search,
   ArrowUpDown,
@@ -210,7 +209,7 @@ export default function EventHistoryPage() {
                     value={searchTerm}
                     onChange={e => setSearchTerm(e.target.value)}
                     className="w-full"
-                    icon={Search}
+                    startIcon={<Search />}
                   />
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:w-2/3">
